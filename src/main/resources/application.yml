@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: test-samples
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  datasource:
+    username: test
+    password: test
+    url: jdbc:postgresql://localhost:5432/testdb
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
+  flyway:
+    user: test
+    password: test
+    url: jdbc:postgresql://localhost:5432/testdb
