@@ -1,5 +1,7 @@
 package com.tallstech.samples.controller;
 
+import java.util.List;
+
 import com.tallstech.samples.model.Comment;
 import com.tallstech.samples.service.CommentService;
 import jakarta.validation.Valid;
@@ -30,7 +32,7 @@ public class CommentController {
     }
 
     @GetMapping("{topicId}")
-    public Iterable<Comment> getCommentsByTopicId(@PathVariable String topicId){
+    public List<Comment> getCommentsByTopicId(@PathVariable Long topicId){
         return commentService.viewCommentsOfTopic(topicId);
     }
 }

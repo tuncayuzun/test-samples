@@ -1,6 +1,6 @@
 package com.tallstech.samples.service;
 
-import java.util.Optional;
+import java.util.List;
 
 import com.tallstech.samples.model.Comment;
 import com.tallstech.samples.repository.CommentRepository;
@@ -20,8 +20,8 @@ public class CommentService {
      return commentRepository.save(comment);
     }
 
-    public Iterable<Comment> viewCommentsOfTopic(String topicId){
-        return commentRepository.findCommentByTopicId(topicId);
+    public List<Comment> viewCommentsOfTopic(Long topicId){
+        return commentRepository.findCommentsByTopicId(topicId);
     }
 
 
